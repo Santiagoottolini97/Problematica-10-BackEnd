@@ -13,10 +13,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const users = {
-  fullName: "",
-  email: "",
-  password: "",
-  passwordR: "",
+  fullName: [],
+  emailr: [],
+  password: [],
+  passwordR: [],
 };
 
 app.get("/get", (req, res) => {
@@ -24,7 +24,13 @@ app.get("/get", (req, res) => {
 });
 
 app.post("/postUser", (req, res) => {
-  res.send("Succes");
+  users.fullName.push(req.body.namer)
+  users.emailr.push(req.body.emailr)
+  users.password.push(req.body.password)
+  users.passwordR.push(req.body.passwordR)
+  
+  res.send(users);
+  console.log(users)
 });
 
 app.listen(port, () => {
