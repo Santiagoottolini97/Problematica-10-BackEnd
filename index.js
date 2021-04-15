@@ -6,32 +6,30 @@ const app = express();
 
 //When we have a forms, with this line can accepts this forms html, extended false said that only
 //recive json format, not image or video for instance
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //CORS
 app.use(cors());
 
-const users = {
-    fullName: [],
-    emailr: [],
-    password: [],
-    passwordR: [],
-};
+const users = [];
 
 app.get('/get', (req, res) => {
     res.status(200).send(users);
 });
 
 app.post('/postUser', (req, res) => {
-    users.fullName.push(req.body.namer);
-    users.emailr.push(req.body.emailr);
-    users.password.push(req.body.password);
-    users.passwordR.push(req.body.passwordR);
+    users.push(req.body);
+    users.join(', ');
     res.send(users);
 });
 app.put('/putUser', (req, res) => {
-
+    const saveUser = users.find((data) => {
+        return data.emailr === emailr;
+    });
+    if (saveUser) {
+        res.send(saveUser);
+    }
 });
 
 app.listen(port, () => {
