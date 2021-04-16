@@ -31,10 +31,10 @@ app.put('/putUser', (req, res) => {
 
     users.find((data) => {
         if (verify.emailr === data.emailr && verify.password === data.password) {
-            res.send('Account exist');
+            res.status(200).send('Logged successfully');
             return;
         } else {
-            res.send('Account not exist');
+            res.status(400).send('Error loggin, invalid email or password');
             return;
         }
     });
