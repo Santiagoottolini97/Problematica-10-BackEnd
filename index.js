@@ -24,12 +24,20 @@ app.post('/postUser', (req, res) => {
     res.send(users);
 });
 app.put('/putUser', (req, res) => {
-    const saveUser = users.find((data) => {
-        return data.emailr === emailr;
+    const verify = {
+        emailr: req.body.emailr,
+        password: req.body.password,
+    };
+
+    users.find((data) => {
+        if (verify.emailr === data.emailr && verify.password === data.password) {
+            res.send('Account exist');
+            return;
+        } else {
+            res.send('Account not exist');
+            return;
+        }
     });
-    if (saveUser) {
-        res.send(saveUser);
-    }
 });
 
 app.listen(port, () => {
