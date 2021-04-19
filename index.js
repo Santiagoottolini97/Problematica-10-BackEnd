@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const port = process.env.PORT || 4000;
+const port = 4000;
 const app = express();
 
 //When we have a forms, with this line can accepts this forms html, extended false said that only
@@ -18,12 +18,12 @@ app.get('/get', (req, res) => {
     res.status(200).send(users);
 });
 
-app.post('/postUser', (req, res) => {
+app.post('/registerUser', (req, res) => {
     users.push(req.body);
     users.join(', ');
     res.send(users);
 });
-app.put('/putUser', (req, res) => {
+app.put('/loginUser', (req, res) => {
     const verify = {
         emailr: req.body.emailr,
         password: req.body.password,
