@@ -8,6 +8,7 @@ const app = express();
 //recive json format, not image or video for instance
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static("public"))
 
 //CORS
 app.use(cors());

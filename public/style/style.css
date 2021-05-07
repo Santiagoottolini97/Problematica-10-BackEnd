@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    background: url(../assets/background.png) center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+}
+.containerRegister,
+.containerLogin {
+    position: relative;
+    width: 450px;
+    height: auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    background: #dedede;
+    box-shadow: 9px 9px 6px 9px rgb(61, 60, 60);
+}
+.containerRegister {
+    margin-bottom: 50px;
+}
+.containerEmail {
+    margin-top: 30px;
+}
+.title {
+    padding: 20px 130px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #130f40;
+}
+
+.loginForm {
+    padding: 20px 40px;
+}
+.loginForm .labelElement {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #130f40;
+}
+.loginForm input {
+    height: 40px;
+    width: 350px;
+    padding: 0 5px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid silver;
+}
+.loginForm .labelElements {
+    margin-top: 30px;
+}
+.registerForm {
+    padding: 20px 40px;
+}
+.registerForm .labelElement {
+    font-size: 18px;
+    color: #130f40;
+    margin: 5px 0;
+}
+.registerForm input {
+    height: 40px;
+    width: 350px;
+    padding: 0 5px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid silver;
+}
+.registerForm .labelElements {
+    margin-top: 30px;
+}
+.containerPassword {
+    margin-top: 30px;
+}
+.btnSend {
+    height: 45px;
+    width: 100%;
+    margin: 45px 0 30px 0;
+    background: #1a237e;
+    border-radius: 3px;
+    border: 1px solid #3949ab;
+    transition: 0.5s;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btnSend:hover {
+    background: #151c6a;
+}
+#error {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+.containerLinkLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #3d3e53;
+    border-radius: 3px;
+    border: 1px solid #797e99;
+    height: 40px;
+}
+.linkLogin {
+    text-decoration-line: none;
+    color: white;
+}
+.linkRegister {
+    text-decoration-line: none;
+    color: white;
+}
+.containerLinkRegister {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background: #3d3e53;
+    border-radius: 3px;
+    border: 1px solid #797e99;
+}
+#containerData {
+    display: flex;
+    justify-content: center;
+}
+#titleData {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: black;
+    font-size: 18px;
+    color: white;
+}
